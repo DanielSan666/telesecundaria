@@ -1,0 +1,25 @@
+
+.table {
+    width: 300px;
+    border-collapse: collapse;
+    overflow-x: auto;
+    }
+    
+    .table th,
+    .table td {
+    border: 1px solid rgb(40, 65, 254); 
+    padding: 3.5px;
+    text-align: center;
+    width: 10px;
+    }
+    
+    .table th {
+    background-color: rgb(40, 65, 254);; 
+    font-weight: bold;
+    width: 10px;
+    column-span: 2;
+    }
+    
+    .table td a:hover {
+    background-color: #56d2ff;
+    }
