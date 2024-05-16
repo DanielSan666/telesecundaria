@@ -1,0 +1,65 @@
+.registro-form {
+    width: 80%;
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inputContainer {
+    margin-bottom: 20px;
+}
+
+.inputContainer label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inputContainer input[type="text"],
+.inputContainer input[type="email"],
+.inputContainer input[type="password"],
+.inputContainer select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submitBtn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4336f8d3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: #1c03fd;
+}
+
+.submitBtn2 {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f03f39d3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submitBtn2:hover {
+    background-color: #fa2111;
+}
+

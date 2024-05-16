@@ -25,9 +25,7 @@
     <h1>
         {{ user.username }}, Bienvenido
     </h1>
-    {% if user.groups.all.0.name == 'Superusuario' %}
     <li><a href="{% url 'registro' %}">Registrarse</a></li>
-    {% endif %}
     <li><a href="{% url 'exit' %}">Salir</a></li>
     <nav>
         <ul>

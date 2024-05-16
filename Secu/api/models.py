@@ -2,8 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-
-
 class Calificaciones(models.Model):
     grupo = models.CharField(max_length=100)
     nombre_profesor = models.CharField(max_length=100)
