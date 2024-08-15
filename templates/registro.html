@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="icon" href="{% static 'img/logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
+</head>
+<body>
+    <div class="singupFrm">
+        <form method="POST" class="registro-form">
+            {% csrf_token %}
+            <h1 class="title">Registro de Usuario</h1>
+            <div class="inputContainer">
+                <label for="id_username">Nombre de usuario:</label>
+                {{ form.username }}
+            </div>
+            <div class="inputContainer">
+                <label for="id_matricula">Matricula:</label>
+                {{form.matricula}}
+            </div>
+            <div class="inputContainer">
+                <label for="id_email">Correo electrónico:</label>
+                {{ form.email }}
+            </div>
+            <div class="inputContainer">
+                <label for="id_password1">Contraseña:</label>
+                {{ form.password1 }}
+            </div>
+            <div class="inputContainer">
+                <label for="id_password2">Confirmar contraseña:</label>
+                {{ form.password2 }}
+            </div>
+            <div class="inputContainer">
+                <label for="id_tipo_usuario">Tipo de usuario:</label>
+                {{ form.tipo_usuario }}
+            </div>
+            <button type="submit" class="submitBtn">Registrarse</button>
+            <br>
+            <a href="{% url 'home' %}" class="submitBtn2">Regresar</a>
+        </form>
+    </div>
+    
+</body>
+</html>

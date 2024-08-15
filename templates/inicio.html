@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telesecundaria</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'img/logo.jpg' %}">
+</head>
+<body>
+    <style>
+        body{
+            max-width: 3000px; /* Ancho máximo de la página */
+            margin: 0 auto; /* Centrar la página horizontalmente */
+            padding: 20px; 
+        }
+        h1 {
+            font-size: 18px; /* Tamaño de la letra chica */
+            text-align: right; /* Alineación a la izquierda */
+        }
+    </style>
+    <h2>Telesecundaria Mano Amiga</h2>
+    {% if request.user.is_authenticated %}
+    <h1>
+        {{ user.username }}, Bienvenido
+    </h1>
+    <li><a href="{% url 'registro' %}">Registrarse</a></li>
+    <li><a href="{% url 'exit' %}">Salir</a></li>
+    <nav>
+        <ul>
+            <li class="hideOnMobile"><a href="">Inicio</a></li>
+            <li class="hideOnMobile"><a href="{% url 'index' %}">Alumnos</a></li>
+        </ul>
+    </nav>
+    {% endif %}
+</body>
+</html>

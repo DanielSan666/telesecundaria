@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios Registrados</title>
+</head>
+<body>
+    <h1>Usuarios Registrados</h1>
+    <ul>
+        {% for usuario in usuarios %}
+            <li>{{ usuario.username }} - {{ usuario.email }} - Grupos:
+                {% for group in usuario.groups.all %}
+                    {{ group.name }}
+                    {% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
